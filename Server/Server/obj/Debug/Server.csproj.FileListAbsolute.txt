@@ -1,0 +1,7 @@
+C:\Users\USER\Desktop\UnityStudy\IndianPoker\Server\Server\bin\Debug\Server.exe.config
+C:\Users\USER\Desktop\UnityStudy\IndianPoker\Server\Server\bin\Debug\Server.exe
+C:\Users\USER\Desktop\UnityStudy\IndianPoker\Server\Server\bin\Debug\Server.pdb
+C:\Users\USER\Desktop\UnityStudy\IndianPoker\Server\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+C:\Users\USER\Desktop\UnityStudy\IndianPoker\Server\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\UnityStudy\IndianPoker\Server\Server\obj\Debug\Server.exe
+C:\Users\USER\Desktop\UnityStudy\IndianPoker\Server\Server\obj\Debug\Server.pdb
