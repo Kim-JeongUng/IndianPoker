@@ -19,6 +19,7 @@ public class GameServer
     private TcpListener listener;
     public List<Player> players; // players 리스트를 public으로 변경
     private bool isRunning;
+    private bool isGameStart;
     private static Random random = new Random();
     private int currentBet = 0;
     private int totalPot = 0;
@@ -85,6 +86,11 @@ public class GameServer
 
     public void StartGame()
     {
+        if (isGameStart)
+            return;
+
+        isGameStart = true;
+
         List<int> deck = new List<int>();
         for (int i = 1; i <= 13; i++) deck.Add(i);
 
@@ -97,9 +103,10 @@ public class GameServer
                 deck.RemoveAt(cardIndex);
 
                 player.Card = card;
-                player.Coins = 30;  // 초기 코인 설정
+                player.Coins = 30;  
                 player.HasPlacedBet = false;
                 player.Send($"Your card: {card}");
+                Console.WriteLine($"player:{player.Name} :  {card}");
             }
         }
 

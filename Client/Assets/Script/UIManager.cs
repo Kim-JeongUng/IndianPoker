@@ -42,6 +42,7 @@ public class UIManager : MonoBehaviour
 
     void UpdateCardImage(string message)
     {
+        Debug.Log("myCard : "+message);
         // 카드 이미지 업데이트 로직
         string cardValue = message.Split(':')[1].Trim();
         // 예시 카드 이미지를 로드합니다. 실제 카드 이미지는 Resources 폴더에 있어야 합니다.
