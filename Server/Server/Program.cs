@@ -263,6 +263,7 @@ public class Player
             {
                 string message = Encoding.ASCII.GetString(buffer, 0, bytesRead);
                 Console.WriteLine($"Received from {Name}: {message}");
+                Server.Broadcast($"Chat {Name} : {message}");
 
                 if (message.ToLower() == "exit")
                 {

@@ -2,6 +2,7 @@ using System;
 using System.Net.Sockets;
 using System.Text;
 using UnityEngine;
+using System.Threading;
 
 public class NetworkManager : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class NetworkManager : MonoBehaviour
     void Start()
     {
         ConnectToServer("127.0.0.1", 5000);
+        // Capture the synchronization context on the main thread
+        mainThreadContext = SynchronizationContext.Current;
     }
 
     void ConnectToServer(string ipAddress, int port)
@@ -31,7 +34,6 @@ public class NetworkManager : MonoBehaviour
             Debug.LogError($"Failed to connect: {e.Message}");
         }
     }
-
     void OnRead(IAsyncResult ar)
     {
         try
